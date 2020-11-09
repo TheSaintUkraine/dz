@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <style media="screen">
+    img {
+      height: 1000px;
+      width: 1000px;
+    }
+    .wrap {
+      font-size: 30px;
+    }
+  </style>
+  <button onclick="change('1')" >Биология</button>
+  <button onclick="change('2')">Зарубежная литература</button>
+  <h1>Предмет: </h1>
+  <div class="wrap">
+
+  </div>
+  <script>
+    function change(num) {
+      if (num=='1') {
+        document.getElementsByTagName('h1')[0].innerText = 'Предмет: Биология'
+        document.getElementsByClassName('wrap')[0].innerText = '1. В \n 2. Б\n3. Б\n4. В\n5. Б\n6. Г\n7. В\n8. В\n9. В\n10. Г\n11. Б\n12. Б\n13. Г \n14.  B'
+      }
+      if (num=='2') {
+        document.getElementsByTagName('h1')[0].innerText = 'Предмет: Зарубежная литература'
+        document.getElementsByClassName('wrap')[0].innerHTML = '<img src="1.jpg" alt=""><img src="2.jpg" alt="">'
+      }
+    }
+  </script>
+</body>
+</html>
